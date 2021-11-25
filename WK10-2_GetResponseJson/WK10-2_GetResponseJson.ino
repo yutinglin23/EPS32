@@ -34,19 +34,19 @@ void loop() {
     deserializeJson(doc, json);
     
     const char* location = doc["name"]; 
-    const char* value4 = doc["weather"][0]["description"];
-    double value5 = doc["main"]["temp"];
-    double value6 = doc["main"]["humidity"];
+    const char* value1 = doc["weather"][0]["description"];
+    double value2 = doc["main"]["temp"];
+    double value3 = doc["main"]["humidity"];
     Serial.print("*** ");
     Serial.print(location);
     Serial.println(" ***");
     Serial.print("Type: ");
-    Serial.println(value4);
+    Serial.println(value1);
     Serial.print("Temp: ");
-    Serial.print(value5 - 273);
+    Serial.print(value2 - 273);
     Serial.println("C");
     Serial.print("Humidity: ");
-    Serial.print(value6);
+    Serial.print(value3);
     Serial.println("%");
     Serial.println("--------------------"); 
     
